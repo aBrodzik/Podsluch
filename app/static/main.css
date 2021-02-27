@@ -1,0 +1,25 @@
+body {
+
+  background-color: #000000; /* Used if the image is unavailable */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:100%;
+
+}
+
+h1{
+
+ color:gray;
+ text-align:center;
+
+}
+
+.nav-pills > li > a.active {
+    background-color: #24B687!important;
+    color:black!important;
+}
+
+.nav-pills > li > a {
+    background-color: #003927!important;
+    color:black;
+}
