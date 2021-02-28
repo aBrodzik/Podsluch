@@ -7,8 +7,27 @@ from os.path import isfile, join
 app = Flask(__name__)
 
 
-@app.route("/")
+@app.route("/",  methods=['GET', 'POST'])
 def home():
+    if request.method == 'POST':
+        if request.form.get("off"):
+            print("turning off")
+        elif request.form.get("on"):
+            print("turning on")
+        elif request.form.get("connect"):
+                print("connecting...")
+        elif request.form.get("start"):
+                print("starting recoring")
+        elif request.form.get("stop"):
+                print("stopping recording")
+        elif request.form.get("standby"):
+                print("turning on standby")
+        elif request.form.get("standaway"):
+                print("shutting down standby")
+        elif request.form.get("live"):
+                print("starting live")
+
+
     return render_template("index.html")
 
 
@@ -29,48 +48,6 @@ def records():
 def settings():
     return render_template("settings.html")
 
-
-@app.route("/connect", methods=["GET", "POST"])
-def connect():
-    if request.method == "POST":
-        print("connecting...")
-
-    return render_template("index.html")
-
-
-@app.route("/onoff", methods=["GET", "POST"])
-def onoff():
-    if request.method == 'POST':
-        if request.form["off"] == "off":
-            print("turning off")
-        elif request.form["on"] == "on":
-            print("turning on")
-
-    return render_template("index.html")
-
-
-@app.route("/rec", methods=["GET", "POST"])
-def rec():
-    if request.method == "POST":
-        print("recording")
-
-    return render_template("index.html")
-
-
-@app.route("/sb", methods=["GET", "POST"])
-def standby():
-    if request.method == "POST":
-        print("staring standby")
-
-    return render_template("index.html")
-
-
-@app.route("/live", methods=["GET", "POST"])
-def live():
-    if request.method == "POST":
-        print("live")
-
-    return render_template("index.html")
 
 
 if __name__ == "__main__":
