@@ -17,34 +17,57 @@
     <h1>Siodemka's Wiretapp</h1>
     </br>
     </br>
-    <nav>
-        <div>
-            <ul class="nav nav-pills nav-justified">
-                <li class="nav-item">
-                    <a class="nav-link active " href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link  " href="/records">Records</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/settings">Setting</a>
-                </li>
-            </ul>
-
-
-
-            </br>
-            </br>
-        </div>
-    </nav>
 </header>
+<nav>
+    <div>
+        <ul class="nav nav-pills nav-justified">
+            <li class="nav-item">
+                <a class="nav-link active " href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link  " href="/records">Records</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/settings">Setting</a>
+            </li>
+        </ul>
+        </br>
+        </br>
+    </div>
+</nav>
 
-     <p style="color:white">nie umiem w webdev bardzo </p>
-    <p style="color:white">przyciski, on/off, record, stand-by</p>
-    <p style="color:white">"dioda" pokazjąca stan połączenia z podsłuchem</p>
-    <p style="color:white">przcisk otwierający odtwarzacz z transmisją</p>
 
+<section>
 
+    <p style="color:#24B687">Status:Connected</p>
+    <form method="post" action="/connect">
+        <button class="btn btn-primary connect " type="submit">Connect</button>
+    </form>
+
+    <form method="post" action="/onoff">
+         <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="submit" class="btn btn-primary" name="on" value="on">On</button>
+              <button type="submit" class="btn btn-primary" name="off" value="off">Off</button>
+        </div>
+    </form>
+
+    <form method="post" action="/rec">
+          <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="submit" class="btn btn-primary" name="start" value="start">Start</button>
+              <button type="submit" class="btn btn-primary" name="stop" value="stop">Stop</button>
+        </div>
+    </form>
+    <form method="post" action="/sb">
+       <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="submit" class="btn btn-primary" name="standby" value="standby">StandBy</button>
+              <button type="submit" class="btn btn-primary" name="standaway" value="standaway">StandBy Off</button>
+        </div>
+    </form>
+   <form method="post" action="/live">
+        <button class="btn btn-primary live " type="submit">Live</button>
+   </form>
+
+</section>
 
 
 </body>
