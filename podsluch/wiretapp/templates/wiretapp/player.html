@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{% load static %}
+<html xmlns="http://www.w3.org/1999/html" xmlns:color="http://www.w3.org/1999/xhtml"
+      xmlns:text-color="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ STATIC_URL }}/static/main.css" />
+    <link rel="stylesheet"
+        href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <!-- Load FontAwesome icons -->
+    <link rel="stylesheet"
+            href=
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="description" content="This is a wiretap web interface">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+
+    <title>Wiretapp</title>
+</head>
+<body>
+
+<header>
+    </br>
+    <h1>Siodemka's Wiretapp</h1>
+    </br>
+    </br>
+    <nav>
+        <div>
+            <ul class="nav nav-pills nav-justified">
+                <li class="nav-item">
+                    <a class="nav-link  " href="/wiretapp">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  " href="/wiretapp/records">Records</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  active" href="">Player</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/wiretapp/settings">Setting</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+    <div style="background:#24B687">
+
+        <div class="player">
+
+    <!-- Define the section for displaying details -->
+    <div class="details">
+      <div class="track-name">Track Name</div>
+    </div>
+
+    <!-- Define the section for displaying track buttons -->
+    <div class="buttons">
+      <div class="playpause-track" onclick="playpauseTrack()">
+        <i class="fa fa-play-circle fa-5x"></i>
+      </div>
+    </div>
+
+    <!-- Define the section for displaying the seek slider-->
+    <div class="slider_container">
+      <div class="current-time">00:00</div>
+      <input type="range" min="1" max="100"
+        value="0" class="seek_slider" onchange="seekTo()">
+      <div class="total-duration">00:00</div>
+    </div>
+
+    <!-- Define the section for displaying the volume slider-->
+    <div class="slider_container">
+      <i class="fa fa-volume-down"></i>
+      <input type="range" min="1" max="100"
+        value="99" class="volume_slider" onchange="setVolume()">
+      <i class="fa fa-volume-up"></i>
+    </div>
+  </div>
+    </div>
+  <!-- Load the main script for the player -->
+
+    <script src="/static/records.js"></script>
+    <script src="/static/main.js"></script>
+    <p>{{ dic.index }}</p>
+    {% block includes %}
+    {{ index }}
+    <script>loadTrack( {{index }} );</script>
+    {% endblock includes %}
+
+  <!-- Load the main script for the player -->
+  <!-- script src="main.js"></script -->
+
+</body>
+</html>
+
+

@@ -37,6 +37,9 @@
                     <a class="nav-link  active" href="">Records</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link disabled" href="/wiretapp/player">Player</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="/wiretapp/settings">Setting</a>
                 </li>
             </ul>
@@ -48,7 +51,7 @@
 
 <p style="color:#24B687">Records downloaded</p>
 
-<form method="post" action="#">
+<form method="post" >
      {% csrf_token %}
   <ul id="listWithRecords">
     {% for record in records %}
@@ -62,49 +65,7 @@
 </form>
 
 
-
-<p style="color:white">obok przeciski, edytuj, usuń, pobierz (coś jak w bdbt)</p>
-
 <p style="color:#24B687">Records avaiable on server</p>
-
-
-
-    <p style="color:white"> ↓ tutaj potrzebny java script, albo otwieramy w osobnym wątku interfejs z tkintera, w którym robimy odtwarzacz/edytor </p>
-    <div style="background:#24B687">
-            <!-- Define the section for displaying details -->
-        <div class="details">
-          <p id="demo"></p>
-        </div>
-
-        <!-- Define the section for displaying track buttons -->
-          <div class="playpause-track" onclick="playpauseTrack()">
-            <i class="fa fa-play-circle fa-5x"></i>
-          </div>
-
-        <!-- Define the section for displaying the seek slider-->
-        <div class="slider_container">
-          <div class="current-time">00:00</div>
-          <input type="range" min="1" max="100"
-            value="0" class="seek_slider" onchange="seekTo()">
-          <div class="total-duration">00:00</div>
-        </div>
-
-        <!-- Define the section for displaying the volume slider-->
-        <div class="slider_container">
-          <i class="fa fa-volume-down"></i>
-          <input type="range" min="1" max="100"
-            value="99" class="volume_slider" onchange="setVolume()">
-          <i class="fa fa-volume-up"></i>
-        </div>
-
-    </div>
-
-
-  <!-- Load the main script for the player -->
-  <!-- script src="main.js"></script -->
-
-
-
 
 </body>
 </html>
