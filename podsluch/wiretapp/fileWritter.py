@@ -1,6 +1,6 @@
 
 def updateRecordsJS(listOfRecords):
-    path = "C:\\\\Users\\\\g5\\\\PycharmProjects\\\\podsluchDjango\\\\podsluch\\\\wiretapp\\\\static\\\\"
+    path = 'wiretapp/static/'
     f = open(path + '\\records.js' ,'w')
     f.write('let track_list=[')
     for record in listOfRecords:

@@ -1,5 +1,7 @@
 from os import listdir
 from os.path import isfile, join
+
+from podsluch.settings import BASE_DIR
 from . import audio, fileWritter
 from django.shortcuts import render
 from django.template.defaulttags import register
@@ -14,6 +16,7 @@ def home(request):
     if request.POST:
         if 'connect' in request.POST:
             print('connecting')
+            print(BASE_DIR)
         elif 'on' in request.POST:
             print('turing on')
         elif 'off' in request.POST:
@@ -35,10 +38,7 @@ def home(request):
 def records(request):
     args={}
 
-    currentName = ''
-    """tutaj powinna być użyta zmienna systemowa połączona z zmienną lokalną ścieżki
-    środowiska do nagrań, ale na razie zostawiam tak, bo po prostu nie działało inaczej"""
-    path = ('C:/Users/g5/PycharmProjects/podsluchDjango/podsluch/wiretapp/static/records')
+    path = ('wiretapp/static/records')
     recordsList = [f for f in listdir(path) if isfile(join(path, f))]
     fileWritter.updateRecordsJS(recordsList)
     if request.POST:
