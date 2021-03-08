@@ -1,6 +1,6 @@
 body {
 
-  background-color: #000000; /* Used if the image is unavailable */
+  background-color: #4d6600; /* Used if the image is unavailable */
   background-repeat: no-repeat;
   background-size: cover;
   height:100%;
@@ -23,7 +23,22 @@ h1{
     background-color: #003927!important;
     color:black;
 }
-
+.nav-link1 {
+	color: #6600ff;
+	font-size: 150%;
+	margin: 100px;
+	position: relative;
+	top: -150px;
+	left: 1450px;
+}
+.nav-link2 {
+	color: #6600ff;
+	font-size: 150%;
+	margin: 100px;
+	position: relative;
+	top: -150px;
+	left: 1300px;
+}
  .connect  {
     color: black;
 }
