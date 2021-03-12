@@ -11,6 +11,9 @@ let volume_slider = document.querySelector(".volume_slider");
 let curr_time = document.querySelector(".current-time");
 let total_duration = document.querySelector(".total-duration");
 
+let select_begin_time = document.querySelector(".cut-start-time");
+let select_end_time = document.querySelector(".cut-end-time");
+
 // Specify globally used values
 let track_index = 0;
 let isPlaying = false;
@@ -137,6 +140,28 @@ function seekUpdate() {
     total_duration.textContent = durationMinutes + ":" + durationSeconds;
   }
 }
+
+function cutTimeBeginUpdate() {
+ select_begin_time.textContent = curr_time.textContent;
+
+}
+
+function cutTimeEndUpdate() {
+ select_end_time.textContent = curr_time.textContent;
+
+}
+
+function updateCutTimes(){
+
+}
+
+
+
+
+
+
+
+
 
 // Load the first track in the tracklist
 //loadTrack(track_index);

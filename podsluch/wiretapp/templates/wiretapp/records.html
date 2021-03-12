@@ -49,9 +49,9 @@
     </nav>
 </header>
 
-<p style="color:#24B687">Records downloaded</p>
+<p style="color:#24B687">Records avaiable on server</p>
 
-<form method="post" >
+<form method="post">
      {% csrf_token %}
   <ul id="listWithRecords">
     {% for record in records %}
@@ -59,13 +59,14 @@
             <span class="my-handle"> {{ forloop.counter }}</span>
                 <input type="hidden" name="records[]" value="{{ record }}"/> {{ record }}
                 <button type="submit" class="btn btn-primary"  name="{{ forloop.counter }}"  value="{{ forloop.counter }}">Play</button>
+                <button type="submit" class="btn btn-primary"  name="delete"  value="{{ forloop.counter }}" onclick="window.location.href='/wiretapp/records'">Delete</button>
         </li>
     {% endfor %}
   </ul>
 </form>
 
+<p style="color:#24B687">Records downloaded</p>
 
-<p style="color:#24B687">Records avaiable on server</p>
 
 </body>
 </html>
