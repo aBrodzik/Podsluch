@@ -10,6 +10,29 @@
     <meta name="description" content="This is a wiretap web interface">
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <title>Wiretapp</title>
+
+
+    <script>
+    function Live(){
+    let live = document.createElement('audio');
+    live.src = "/static/live/liveTest.wav";
+    live.load();
+    live.play()
+    live.onended = (event) => {Live();};
+    }
+
+    function Live2(){
+    let live = document.createElement('audio');
+    live.src = "/static/live/trueLiveTest.wav";
+    live.oncanplay = (event) => {live.play()};
+    live.load();
+    }
+
+
+
+
+</script>
+
 </head>
 <body>
 
@@ -43,40 +66,29 @@
 
 <section>
 
-    <p style="color:#24B687">Status:Connected</p>s
-    <form method="post" action="#">
-        {% csrf_token %}
-        <button class="btn btn-primary connect " type="submit" name="connect" value="connect">Connect</button>
-    </form>
 
-    <div class="btn-group" role="group" aria-label="Basic example">
-         <form method="post" action="#">
-             {% csrf_token %}
-              <button type="submit" class="btn btn-primary" name="on" value="on">On</button>
-              <button type="submit" class="btn btn-primary" name="off" value="off">Off</button>
-        </form>
-    </div>
+
+
 
      <form method="post" action="#">
         {% csrf_token %}
           <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="submit" class="btn btn-primary" name="start" value="start">Start</button>
-              <button type="submit" class="btn btn-primary" name="stop" value="stop">Stop</button>
+              <button type="submit" class="btn btn-primary" name="start" value="start">Nagrywaie Start</button>
+              <button type="submit" class="btn btn-primary" name="stop" value="stop">Nagrywanie Stop</button>
         </div>
     </form>
-    <form method="post" action="#">
+
+   <form method="post" action="#">
         {% csrf_token %}
-       <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="submit" class="btn btn-primary" name="standby" value="standby">StandBy</button>
-              <button type="submit" class="btn btn-primary" name="standaway" value="standaway">StandBy Off</button>
-        </div>
-    </form>
-   < <form method="post" action="#">
-        {% csrf_token %}
-        <button class="btn btn-primary live " type="submit" name="live" value="live">Live</button>
+        <button class="btn btn-primary live " type="submit" name="live" value="live" >Zacznij nagrywać plik do transmisji</button>
    </form>
 
+
+    <button class="btn btn-primary live " type="submit" name="live" value="live" onclick="Live()">Live podział na kilkusekundowe fragmenty</button>
+    </br>
+    <button class="btn btn-primary live " type="submit" name="live" value="live" onclick="Live2()">Live play while loading</button>
 </section>
+
 
 
 </body>

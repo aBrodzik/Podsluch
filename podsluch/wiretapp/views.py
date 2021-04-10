@@ -2,7 +2,7 @@ from os import listdir
 from os.path import isfile, join
 
 from podsluch.settings import BASE_DIR
-from . import audio, fileWritter
+from . import fileWritter
 from django.shortcuts import render
 from django.template.defaulttags import register
 from django.http import HttpResponse
