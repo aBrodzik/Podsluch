@@ -11048,9 +11048,9 @@ Source: Projects Unlimited Inc. Microphone_TOM-1545P-R_40092-1.pdf</description>
 <attribute name="NAME" x="176.7586" y="82.55" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="171.958" y="82.55" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="GND" gate="1" x="139.7" y="33.02" smashed="yes" rot="R90">
-<attribute name="NAME" x="137.8458" y="31.877" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="143.002" y="31.877" size="1.778" layer="96" rot="R90"/>
+<instance part="GND" gate="1" x="139.7" y="35.56" smashed="yes" rot="R90">
+<attribute name="NAME" x="137.8458" y="34.417" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="143.002" y="34.417" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="9V+" gate="1" x="205.74" y="86.36" smashed="yes" rot="R180">
 <attribute name="NAME" x="211.963" y="84.5058" size="1.778" layer="95" rot="R180"/>
@@ -11065,8 +11065,8 @@ Source: Projects Unlimited Inc. Microphone_TOM-1545P-R_40092-1.pdf</description>
 <attribute name="VALUE" x="40.64" y="71.12" size="1.778" layer="96"/>
 </instance>
 <instance part="IC1" gate="B" x="76.2" y="63.5" smashed="yes">
-<attribute name="NAME" x="78.74" y="69.215" size="1.778" layer="95"/>
-<attribute name="VALUE" x="78.74" y="66.04" size="1.778" layer="96"/>
+<attribute name="NAME" x="76.2" y="71.755" size="1.778" layer="95"/>
+<attribute name="VALUE" x="76.2" y="68.58" size="1.778" layer="96"/>
 </instance>
 <instance part="C7" gate="G$1" x="-1.524" y="36.83" smashed="yes" rot="R180">
 <attribute name="NAME" x="-3.048" y="36.449" size="1.778" layer="95" rot="R180"/>
@@ -11088,9 +11088,9 @@ Source: Projects Unlimited Inc. Microphone_TOM-1545P-R_40092-1.pdf</description>
 <attribute name="NAME" x="113.03" y="62.0014" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="113.03" y="66.802" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="C11" gate="G$1" x="88.9" y="45.72" smashed="yes" rot="R180">
-<attribute name="NAME" x="87.376" y="45.339" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="87.376" y="50.419" size="1.778" layer="96" rot="R180"/>
+<instance part="C11" gate="G$1" x="88.9" y="48.26" smashed="yes" rot="R180">
+<attribute name="NAME" x="87.376" y="47.879" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="87.376" y="52.959" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="R4" gate="G$1" x="40.64" y="53.34" smashed="yes" rot="R180">
 <attribute name="NAME" x="44.45" y="51.8414" size="1.778" layer="95" rot="R180"/>
@@ -11113,7 +11113,6 @@ Source: Projects Unlimited Inc. Microphone_TOM-1545P-R_40092-1.pdf</description>
 <attribute name="VALUE" x="-36.322" y="80.01" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="M1" gate="G$1" x="-40.64" y="53.34" smashed="yes" rot="R180"/>
-<instance part="IC1" gate="P" x="76.2" y="63.5" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -11196,35 +11195,29 @@ Source: Projects Unlimited Inc. Microphone_TOM-1545P-R_40092-1.pdf</description>
 <wire x1="198.12" y1="86.36" x2="203.2" y2="86.36" width="0.1524" layer="91"/>
 <junction x="198.12" y="86.36"/>
 <pinref part="9V+" gate="1" pin="P"/>
-<wire x1="137.16" y1="86.36" x2="76.2" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="86.36" x2="-10.16" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="1"/>
-<wire x1="76.2" y1="86.36" x2="-10.16" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="-10.16" y1="81.28" x2="-10.16" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="R8" gate="G$1" pin="1"/>
 <wire x1="-33.02" y1="81.28" x2="-33.02" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="-33.02" y1="86.36" x2="-10.16" y2="86.36" width="0.1524" layer="91"/>
 <junction x="-10.16" y="86.36"/>
-<pinref part="IC1" gate="P" pin="V+"/>
-<wire x1="76.2" y1="71.12" x2="76.2" y2="86.36" width="0.1524" layer="91"/>
-<junction x="76.2" y="86.36"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="165.1" y1="43.18" x2="165.1" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="165.1" y1="40.64" x2="139.7" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="40.64" x2="139.7" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="43.18" x2="139.7" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="43.18" x2="139.7" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="GND" gate="1" pin="P"/>
 <label x="139.7" y="45.72" size="1.778" layer="95"/>
 <pinref part="C11" gate="G$1" pin="1"/>
-<wire x1="88.9" y1="43.18" x2="88.9" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="88.9" y1="40.64" x2="139.7" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="88.9" y1="40.64" x2="88.9" y2="30.48" width="0.1524" layer="91"/>
-<junction x="88.9" y="40.64"/>
-<wire x1="88.9" y1="30.48" x2="76.2" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="45.72" x2="88.9" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="43.18" x2="139.7" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="43.18" x2="88.9" y2="30.48" width="0.1524" layer="91"/>
+<junction x="88.9" y="43.18"/>
+<wire x1="88.9" y1="30.48" x2="-1.524" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="R7" gate="G$1" pin="2"/>
-<wire x1="76.2" y1="30.48" x2="-1.524" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="-1.524" y1="30.48" x2="-10.16" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="-10.16" y1="30.48" x2="-10.16" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="C7" gate="G$1" pin="1"/>
@@ -11238,9 +11231,6 @@ Source: Projects Unlimited Inc. Microphone_TOM-1545P-R_40092-1.pdf</description>
 <wire x1="-33.02" y1="30.48" x2="-33.02" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="M1" gate="G$1" pin="1"/>
 <wire x1="-33.02" y1="53.34" x2="-35.56" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="P" pin="V-"/>
-<wire x1="76.2" y1="55.88" x2="76.2" y2="30.48" width="0.1524" layer="91"/>
-<junction x="76.2" y="30.48"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -11259,19 +11249,19 @@ Source: Projects Unlimited Inc. Microphone_TOM-1545P-R_40092-1.pdf</description>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="IC1" gate="B" pin="-IN"/>
-<wire x1="66.04" y1="60.96" x2="68.58" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="53.34" x2="66.04" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="C10" gate="G$1" pin="1"/>
 <pinref part="IC1" gate="B" pin="OUT"/>
 <wire x1="93.98" y1="63.5" x2="88.9" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="C11" gate="G$1" pin="2"/>
 <wire x1="88.9" y1="63.5" x2="83.82" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="88.9" y1="63.5" x2="88.9" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="63.5" x2="88.9" y2="55.88" width="0.1524" layer="91"/>
 <junction x="88.9" y="63.5"/>
-<wire x1="88.9" y1="53.34" x2="88.9" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="53.34" x2="88.9" y2="53.34" width="0.1524" layer="91"/>
-<junction x="88.9" y="53.34"/>
+<wire x1="88.9" y1="55.88" x2="88.9" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="55.88" x2="66.04" y2="55.88" width="0.1524" layer="91"/>
+<junction x="88.9" y="55.88"/>
+<wire x1="66.04" y1="55.88" x2="66.04" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="B" pin="-IN"/>
+<wire x1="66.04" y1="60.96" x2="68.58" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
