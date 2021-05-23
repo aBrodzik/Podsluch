@@ -102,3 +102,28 @@ def player(request):
 def get_item(dictionary, key):
     print(dictionary.get(key))
     return HttpResponse(str(dictionary[key]))
+
+#def home(request):
+#    if request.POST:
+#        if 'connect' in request.POST:
+#            print('connecting')
+#        elif 'on' in request.POST:
+#            print('turing on')
+#        elif 'off' in request.POST:
+#            print('turing off')
+#        elif 'start' in request.POST:
+#            print('starting rec')
+#            os.system("exec /home/podsluch/stop.sh")
+#            os.system("exec /home/podsluch/start.sh")
+#        elif 'stop' in request.POST:
+#            print('stopping rec')
+#            os.system("exec /home/podsluch/stop.sh")
+#        elif 'standby' in request.POST:
+#            print('switching to standby')
+#        elif 'standaway' in request.POST:
+#            print('shuting down standby')
+#        elif 'live' in request.POST:
+#            print('going live')
+#            os.system("exec /home/podsluch/stop.sh")
+#            os.system("exec /home/podsluch/startlive.sh")
+#            os.system("exec /home/podsluch/sluchajlive.sh")
