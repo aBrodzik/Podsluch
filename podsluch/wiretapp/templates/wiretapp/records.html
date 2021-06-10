@@ -40,12 +40,7 @@
                 <li class="nav-item">
                     <a class="nav-link player" href="/wiretapp/player">Player</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link settings" href="/wiretapp/settings">Settings</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link help" href="/wiretapp/help">Help</a>
-                </li>
+
                 <li class="nav-item">
                     <a class="nav-link about" href="/wiretapp/about">About</a>
                 </li>
@@ -56,7 +51,7 @@
     </nav>
 </header>
 
-<p style="color:#24B687; position:relative; left:180px; font-size:22px; top:15px; font-weight: bold;">Records avaiable on server</p><br><br>
+<p style="color:yellow; position:relative; left:180px; font-size:22px; top:15px; font-weight: bold;">Records avaiable on server</p><br><br>
 
 <form method="post">
      {% csrf_token %}
@@ -65,14 +60,14 @@
         <li style="color:white">
             <span class="my-handle"> {{ forloop.counter }}</span>
                 <input type="hidden" name="records[]" value="{{ record }}"/> {{ record }}
-                <button type="submit" class="btn btn-primary"  name="{{ forloop.counter }}"  value="{{ forloop.counter }}">Play</button>
-                <button type="submit" class="btn btn-primary"  name="delete"  value="{{ forloop.counter }}" onclick="window.location.href='/wiretapp/records'">Delete</button>
+                <button style="background-color:yellow; color:black;border-color:black" type="submit" class="btn btn-primary"  name="{{ forloop.counter }}"  value="{{ forloop.counter }}">Play</button>
+                <button style="background-color:yellow; color:black;border-color:black"type="submit" class="btn btn-primary"  name="delete"  value="{{ forloop.counter }}" onclick="window.location.href='/wiretapp/records'">Delete</button>
         </li>
     {% endfor %}
   </ul>
 </form>
 
-<p style="color:#24B687; position:relative; left:900px; font-size:22px; top:-210px; font-weight: bold;">Records downloaded</p>
+
 
 
 </body>

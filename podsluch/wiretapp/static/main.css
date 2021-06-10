@@ -188,7 +188,7 @@ h1{
 /* Define the slider width so that it scales properly */
 .slider_container {
   width: 75%;
-  max-width: 400px;
+  max-width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
