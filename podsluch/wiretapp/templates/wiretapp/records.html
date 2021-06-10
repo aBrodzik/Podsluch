@@ -20,27 +20,34 @@
 
     <title>Wiretapp</title>
 </head>
+
 <body>
 
 <header>
     </br>
-    <h1>Siodemka's Wiretapp</h1>
+    <h1>Nagrania</h1>
     </br>
     </br>
     <nav>
         <div>
             <ul class="nav nav-pills nav-justified">
                 <li class="nav-item">
-                    <a class="nav-link  " href="/wiretapp">Home</a>
+                    <a class="nav-link  active" href="/wiretapp">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  active" href="">Records</a>
+                    <a class="nav-link  records" href="">Records</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="/wiretapp/player">Player</a>
+                    <a class="nav-link player" href="/wiretapp/player">Player</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/wiretapp/settings">Setting</a>
+                    <a class="nav-link settings" href="/wiretapp/settings">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link help" href="/wiretapp/help">Help</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link about" href="/wiretapp/about">About</a>
                 </li>
             </ul>
             </br>
@@ -49,11 +56,11 @@
     </nav>
 </header>
 
-<p style="color:#24B687">Records avaiable on server</p>
+<p style="color:#24B687; position:relative; left:180px; font-size:22px; top:15px; font-weight: bold;">Records avaiable on server</p><br><br>
 
 <form method="post">
      {% csrf_token %}
-  <ul id="listWithRecords">
+  <ul id="listWithRecords" class="records_list">
     {% for record in records %}
         <li style="color:white">
             <span class="my-handle"> {{ forloop.counter }}</span>
@@ -65,7 +72,7 @@
   </ul>
 </form>
 
-<p style="color:#24B687">Records downloaded</p>
+<p style="color:#24B687; position:relative; left:900px; font-size:22px; top:-210px; font-weight: bold;">Records downloaded</p>
 
 
 </body>

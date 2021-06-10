@@ -32,8 +32,8 @@
 
 
 </script>
-
 </head>
+
 <body>
 
 <header>
@@ -49,15 +49,22 @@
                 <a class="nav-link active " href="">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link  " href="records/">Records</a>
+                <a class="nav-link records" href="records/">Records</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled " href="player/">Player</a>
+                <a class="nav-link player" href="player/">Player</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="settings/">Setting</a>
+                <a class="nav-link settings" href="settings/">Settings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link help" href="help/">Help</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link about" href="about/">About</a>
             </li>
         </ul>
+
         </br>
         </br>
     </div>
@@ -65,28 +72,23 @@
 
 
 <section>
-
-
-
-
-
      <form method="post" action="#">
         {% csrf_token %}
           <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="submit" class="btn btn-primary" name="start" value="start">Nagrywaie Start</button>
-              <button type="submit" class="btn btn-primary" name="stop" value="stop">Nagrywanie Stop</button>
+              <button style="position:relative; left:650px; top: 50px; font-size:25px" type="submit" class="btn btn-primary" name="start" value="start">Nagrywanie Start</button><br><br>
+              <button style="position:relative; left: 435px; top: 140px; font-size:25px" type="submit" class="btn btn-primary" name="stop" value="stop">Nagrywanie Stop</button>
         </div>
-    </form>
+    </form><br>
 
    <form method="post" action="#">
         {% csrf_token %}
-        <button class="btn btn-primary live " type="submit" name="live" value="live" >Zacznij nagrywać plik do transmisji</button>
-   </form>
+        <button style="position:relative; left: 550px; top: 150px; font-size:25px" class="btn btn-primary live " type="submit" name="live" value="live" >Zacznij nagrywać plik do transmisji</button>
+   </form><br>
 
 
-    <button class="btn btn-primary live " type="submit" name="live" value="live" onclick="Live()">Live podział na kilkusekundowe fragmenty</button>
+    <button style="position:relative; left: 520px; top: 160px; font-size:25px" class="btn btn-primary live " type="submit" name="live" value="live" onclick="Live()">Live podział na kilkusekundowe fragmenty</button><br>
     </br>
-    <button class="btn btn-primary live " type="submit" name="live" value="live" onclick="Live2()">Live play while loading</button>
+    <button style="position:relative; left: 620px; top: 170px; font-size:25px" class="btn btn-primary live " type="submit" name="live" value="live" onclick="Live2()">Live play while loading</button><br>
 </section>
 
 

@@ -1,6 +1,6 @@
 body {
 
-  background-color: #000000; /* Used if the image is unavailable */
+  background-image: url("images/fon.png"); /* Used if the image is unavailable */
   background-repeat: no-repeat;
   background-size: cover;
   height:100%;
@@ -9,20 +9,98 @@ body {
 
 h1{
 
- color:gray;
+ color:black!important;
  text-align:center;
+ font-weight: bold;
 
 }
 
 .nav-pills > li > a.active {
-    background-color: #24B687!important;
+    background-color: yellow!important;
     color:black!important;
+    position:relative;
+    left:15px;
+    font-size:16px;
+    width:160px;
 }
 
-.nav-pills > li > a {
-    background-color: #003927!important;
+.nav-pills > li > a.records {
+    background-color: yellow!important;
     color:black;
+    font-size:16px;
+    position:relative;
+    left:25px;
+    width:160px;
 }
+.nav-pills > li > a.player {
+    background-color: grey!important;
+    color:black;
+    font-size:16px;
+    position:relative;
+    left:35px;
+    width:160px;
+    height:40px;
+    pointer-events:none;
+
+
+}
+.nav-pills > li > a.settings {
+    background-color: yellow!important;
+    color:black;
+    font-size:16px;
+    position:relative;
+    left:45px;
+    width:160px;
+}
+.nav-pills > li > a.help {
+    background-color: yellow!important;
+    color:black;
+    font-size:16px;
+    position:relative;
+    left:55px;
+    width:160px;
+}
+.nav-pills > li > a.about {
+    background-color: yellow!important;
+    color:black;
+    font-size:16px;
+    position:relative;
+    left:65px;
+    width:160px;
+}
+
+.opis {
+	position:relative;
+	text-align: center;
+	margin: 70px;
+	right: 20px;
+	font-size: 150%;
+	color:snow;
+}
+.authors {
+	position:relative;
+	top: -30px;
+	text-align: center;
+	font-size: 130%;
+	background-color: #FF8C00;
+}
+.about_table {
+    color:white;
+    position:relative;
+    left: 100px;
+    top:-100px;
+    font-size:25px;
+
+
+}
+.btn-group > a.button-primary{
+    position:relative;
+    top: 50px;
+    left: 80px;
+    background-color: blue;
+    color:white;
+}
+
 
  .connect  {
     color: black;
@@ -30,6 +108,13 @@ h1{
 
 .form-switch{
     color:#24B687;
+
+}
+.records_list {
+    position:relative;
+    left: 140px;
+
+
 }
 
 /* Using flex with the column direction to
@@ -80,6 +165,7 @@ h1{
   display: flex;
   flex-direction: row;
   align-items: center;
+
 }
 
 .playpause-track,
