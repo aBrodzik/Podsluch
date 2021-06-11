@@ -22,10 +22,6 @@ def home(request):
             print('starting rec')
         elif 'stop' in request.POST:
             print('stopping rec')
-        elif 'standby' in request.POST:
-            print('switching to standby')
-        elif 'standaway' in request.POST:
-            print('shuting down standby')
         elif 'live' in request.POST:
             print('going live')
 
