@@ -15,7 +15,7 @@
     <script>
     function Live(){
     let live = document.createElement('audio');
-    live.src = "TUTAJ LINK DO TRANSMISJI";
+    live.src = "http://127.0.0.1:8001/";
     live.load();
     live.play()
     }
@@ -71,6 +71,8 @@
         {% csrf_token %}
     <button style="position:relative; left: 685px; top: 160px; font-size:25px; background-color:yellow; color:black;border-color:black" class="btn btn-primary live " type="submit" name="live" value="live" onclick="Live()">play live</button><br>
      </form><br>
+
+        <button style="position:relative; left: 685px; top: 160px; font-size:25px; background-color:yellow; color:black;border-color:black" class="btn btn-primary live " type="submit" name="liveTest" value="liveTest" onclick="Live()">play live</button><br>
      </br>
 
 </section>

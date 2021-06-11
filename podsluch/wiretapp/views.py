@@ -12,7 +12,7 @@ import os
 # Create your views here.
 def home(request):
     if request.POST:
-        if 'connect' in request.POST:
+        if 'start' in request.POST:
             print('connecting')
         elif 'on' in request.POST:
             print('turing on')
