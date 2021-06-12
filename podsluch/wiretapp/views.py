@@ -18,17 +18,15 @@ def home(request):
     fileWritter.updateRecordsJS(recordsList)
 
     if request.POST:
-        if 'start' in request.POST:
-            print('connecting')
-        elif 'on' in request.POST:
-            print('turing on')
-        elif 'off' in request.POST:
-            print('turing off')
-        elif 'start' in request.POST:
-            print('starting rec')
-        elif 'stop' in request.POST:
+        if 'start' in request.POST: #zacznij nagrywanie
+            print('Starting recording')
+        elif 'on' in request.POST: #zacznij odbieranie (do transmisji)
+            print('Receiving')
+        elif 'off' in request.POST: #przestań odbierać (do transmisji)
+            print('Stop receiving')
+        elif 'stop' in request.POST: #przestań nagrywać
             print('stopping rec')
-        elif 'live' in request.POST:
+        elif 'liveTest' in request.POST: #słuchaj transmisji
             print('going live')
 
     return render(request, 'wiretapp/index.html')
