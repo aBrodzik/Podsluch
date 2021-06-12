@@ -156,7 +156,7 @@ def get_audio(request):
     # get the actual data from the raw audio file
     with open(file_path, "rb") as f:
         f.seek(start_o)
-        data += f.read(length)
+        data += f.read(length).decode("utf-8")
 
     # send response with use of Content-Range
     resp = HttpResponse(data, content_type="audio/x-wav", status=206)
