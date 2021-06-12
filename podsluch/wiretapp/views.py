@@ -12,6 +12,11 @@ import os
 
 # Create your views here.
 def home(request):
+
+    path = ('wiretapp/static/records')
+    recordsList = [f for f in listdir(path) if isfile(join(path, f))]
+    fileWritter.updateRecordsJS(recordsList)
+
     if request.POST:
         if 'start' in request.POST:
             print('connecting')
