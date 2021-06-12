@@ -8,5 +8,6 @@ urlpatterns = [
     path('settings/', views.settings, name='wiretapp-settings'),
     path('player/', views.player, name='wiretapp-player'),
     path('help/', views.help1, name='wiretapp-help'),
-    path('about/', views.about, name='wiretapp-about')
+    path('about/', views.about, name='wiretapp-about'),
+    path('getAudio/', views.get_audio, name='wiretapp-getAudio')
 ]
