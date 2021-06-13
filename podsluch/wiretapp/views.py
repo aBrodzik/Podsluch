@@ -20,17 +20,16 @@ def home(request):
     if request.POST:
         if 'start' in request.POST: #zacznij nagrywanie
             print('Starting recording')
-            os.system("exec /home/podsluch/stop.sh")
-            os.system("exec /home/podsluch/start.sh")
+            os.system("exec ~/siodemka-master/podsluch/wiretapp/stop.sh")
+            os.system("exec ~/siodemka-master/podsluch/wiretapp/start.sh")
         elif 'on' in request.POST: #zacznij odbieranie (do transmisji)
             print('Receiving')
-            os.system("exec /home/podsluch/stop.sh")
-            os.system("exec /home/podsluch/startlive.sh")
+            os.system("exec ~/siodemka-master/podsluch/wiretapp/stop.sh")
+            os.system("exec ~/siodemka-master/podsluch/wiretapp/startlive.sh")
         elif 'off' in request.POST: #przestań odbierać (do transmisji)
             print('Stop receiving')
-            os.system("exec /home/podsluch/stop.sh")
-            os.system("exec /home/podsluch/konwlive.sh")
-
+            os.system("exec ~/siodemka-master/podsluch/wiretapp/stop.sh")
+            os.system("exec ~/siodemka-master/podsluch/wiretapp/konwlive.sh")
     return render(request, 'wiretapp/index.html')
 
 
