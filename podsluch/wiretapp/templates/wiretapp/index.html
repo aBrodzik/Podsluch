@@ -68,26 +68,28 @@
         {% csrf_token %}
           <div class="btn-group" role="group" aria-label="Basic example">
               <button style="position:relative; left:650px; top: 50px; font-size:25px;background-color:yellow; color:black; border-color:black"
-                      type="submit" class="btn btn-primary" name="start" value="start">start recording</button><br><br>
+                      type="submit" class="btn btn-primary" name="start" value="start">start recording</button>
+              <!--
               <button style="position:relative; left:455px; top: 140px; font-size:25px;background-color:yellow; color:black;border-color:black"
-                      type="submit" class="btn btn-primary" name="stop" value="stop">stop recording</button>
+                      type="submit" class="btn btn-primary" name="stop" value="stop">stop recording</button> -->
         </div>
     </form>
-    <br>
+
     <form method="post" action="#">
         {% csrf_token %}
-        <button style="position:relative; left: 650px; top: 150px; font-size:25px; background-color:yellow; color:black;border-color:black"
-                class="btn btn-primary live " type="submit" name="on" value="on" > start receiving </button>
-    </form><br>
+        <button style="position:relative; left: 680px; top: 100px; font-size:25px; background-color:yellow; color:black;border-color:black"
+                class="btn btn-primary live " type="submit" name="on" value="on" > start live </button>
     </form>
-        {% csrf_token %}
-         <button style="position:relative; left: 650px; top: 150px; font-size:25px; background-color:yellow; color:black;border-color:black"
-                 class="btn btn-primary live " type="submit" name="off" value="off" > stop receiving </button>
+r        {% csrf_token %}
+         <button style="position:relative; left: 690px; top: 150px; font-size:25px; background-color:yellow; color:black;border-color:black"
+                 class="btn btn-primary live " type="submit" name="off" value="off" > stop </button>
     </form>
     <br>
     <br>
+    <!--
     <button style="position:relative; left: 685px; top: 160px; font-size:25px; background-color:yellow; color:black;border-color:black"
                 class="btn btn-primary live " type="submit" name="liveTest" value="liveTest" onclick="Live()">play live</button><br>
+                -->
     <!---
     <form method="post" action="#">
         {% csrf_token %}
