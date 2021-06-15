@@ -1,0 +1,39 @@
+--- Bill of Materials ---
+
+Ref.	Mfg.	Part No.	Description
+C1	--	--	capacitor, 220nF	-
+C12	--	--	capacitor, 220nF	-
+C13	--	--	capacitor, 220nF	-
+C2	--	--	capacitor, 470pF	+
+C15	--	--	capacitor, 470pF	+
+C3	--	--	capacitor, 100µF	+
+C4	--	--	capacitor, 100µF	+
+C5	--	--	capacitor, 100µF	+
+C14	--	--	capacitor, 100µF	+
+C6	--	--	capacitor, 1nF		+
+C7	--	--	capacitor, 39pF		+
+C8	--	--	capacitor, 5pF		+
+C9	--	--	capacitor, 68pF		+
+C10	--	--	capacitor, 2pF		+
+C11	--	--	capacitor, 47nF		+
+
+L1	--	--	inductor, 100nH
+Q1	NXP	2N3904	bipolar transistor
+R1	--	--	resistor, 47K		+
+R2	--	--	resistor, 5.7K		+
+R3	--	--	resistor, 10K		+
+R4	--	--	resistor, 10K		+
+R5	--	--	resistor, 10K		+
+R6	--	--	resistor, 2.2K		+
+R7	--	--	resistor, 33K		+
+R8	--	--	resistor, 150		(nadajnik)
+R9	--	--	resistor, 1K		+
+R10	--	--	resistor, 100		+
+R11	--	--	resistor, 39K		+
+R12	--	--	resistor, 5.7K		+
+R14	--	--	resistor, 10K		+
+R15	--	--	resistor, 10K		+
+R16	--	--	resistor, 10K		+
+R17	--	--	resistor, 10K		+
+U1	(unknown)	LMX58_LM2904	(unknown 3rd party model)
+U2	(unknown)	LMX58_LM2904	(unknown 3rd party model)
